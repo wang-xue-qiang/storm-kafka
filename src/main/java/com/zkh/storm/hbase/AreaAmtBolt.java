@@ -20,7 +20,7 @@ import com.zkh.hbase.dao.HbaseDao;
 import com.zkh.hbase.dao.impl.HbaseDaoImpl;
 
 public class AreaAmtBolt implements IBasicBolt {
-	private static final long serialVersionUID = 3L;
+	private static final long serialVersionUID = 1L;
 	Map<String ,Double> countsMap = null;
 	private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 	HbaseDao hbaseDao = null;
@@ -30,8 +30,6 @@ public class AreaAmtBolt implements IBasicBolt {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
 
 	@SuppressWarnings("rawtypes")
 	@Override
