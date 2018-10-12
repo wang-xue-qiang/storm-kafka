@@ -6,7 +6,7 @@ import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
 import org.apache.storm.topology.TopologyBuilder;
-
+//https://github.com/nathanmarz/storm-starter 官方例子
 public class MyPolo {
 	public static void main(String[] args) {
 		TopologyBuilder builder = new TopologyBuilder();

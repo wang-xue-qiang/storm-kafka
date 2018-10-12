@@ -6,9 +6,14 @@
     <groupId>com.zkh</groupId>
     <artifactId>storm-kafka</artifactId>
     <version>1.0-SNAPSHOT</version>
- 
+     <repositories>
+        <!-- Repository where we can found the storm dependencies  -->
+        <repository>
+            <id>clojars.org</id>
+            <url>http://clojars.org/repo</url>
+        </repository>
+     </repositories>
     <dependencies>
-    
         <!-- hbase start-->
 		<dependency>
 		  <groupId>org.apache.hbase</groupId>
@@ -50,32 +55,14 @@
         <!--kafka start  -->
         <dependency>
 		    <groupId>org.apache.kafka</groupId>
-		   <!--  <artifactId>kafka_2.12</artifactId>
-		    <version>1.0.0</version> -->
 		    <artifactId>kafka_2.10</artifactId>
 			<version>0.8.2.1</version>
-<!-- 		       <exclusions>  
-                <exclusion>  
-                    <groupId>org.apache.zookeeper</groupId>  
-                    <artifactId>zookeeper</artifactId>  
-                </exclusion>  
-                <exclusion>  
-                    <groupId>log4j</groupId>  
-                    <artifactId>log4j</artifactId>  
-                </exclusion>  
-                <exclusion>  
-                    <groupId>org.slf4j</groupId>  
-                    <artifactId>slf4j-log4j12</artifactId>  
-                </exclusion>  
-            </exclusions>  -->
 		</dependency>
-		
     	<dependency>
 		    <groupId>org.apache.kafka</groupId>
 		    <artifactId>kafka-clients</artifactId>
 		    <version>1.0.0</version>
 		</dependency>
-	
 		<dependency>
 		    <groupId>org.apache.kafka</groupId>
 		    <artifactId>kafka-streams</artifactId>
@@ -83,6 +70,50 @@
 		</dependency>
 		<!--kafka end  -->
 		
+		
+		<!--storm start  -->
+		<dependency>
+	      <groupId>org.testng</groupId>
+	      <artifactId>testng</artifactId>
+	      <version>6.8.5</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.mockito</groupId>
+	      <artifactId>mockito-all</artifactId>
+	      <version>1.9.0</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.easytesting</groupId>
+	      <artifactId>fest-assert-core</artifactId>
+	      <version>2.0M8</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.jmock</groupId>
+	      <artifactId>jmock</artifactId>
+	      <version>2.6.0</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <dependency>
+	      <groupId>storm</groupId>
+	      <artifactId>storm</artifactId>
+	      <version>0.9.0.1</version>
+	      <scope>provided</scope>
+	    </dependency> 
+	    <dependency>
+	      <groupId>commons-collections</groupId>
+	      <artifactId>commons-collections</artifactId>
+	      <version>3.2.1</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.google.guava</groupId>
+	      <artifactId>guava</artifactId>
+	      <version>15.0</version>
+	    </dependency>
+	    <!--storm end -->
+	    
     </dependencies>
     <build>
         <plugins>
