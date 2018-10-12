@@ -26,4 +26,5 @@ hs_err_pid*
 .project
 .settings
 /.settings/
-.gitignore
+.gitignore n   
+/logs/
