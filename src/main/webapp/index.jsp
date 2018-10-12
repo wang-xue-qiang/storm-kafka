@@ -20,7 +20,8 @@ function jsFun(m){
 	series2.setData(eval(jsdata.hisData));
 }
 function init(){
-	var action ="http://172.17.1.191:8083/storm-kafka/areaServlet";
+	var basePath ="${pageContext.request.contextPath}";
+	var action =basePath+"/areaServlet";
 	$("#myFrom").attr("action",action);
 	$("#myFrom").submit();
 }
