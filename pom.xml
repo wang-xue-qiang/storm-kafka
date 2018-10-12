@@ -6,13 +6,20 @@
     <groupId>com.zkh</groupId>
     <artifactId>storm-kafka</artifactId>
     <version>1.0-SNAPSHOT</version>
-     <repositories>
-        <!-- Repository where we can found the storm dependencies  -->
-        <repository>
-            <id>clojars.org</id>
-            <url>http://clojars.org/repo</url>
-        </repository>
-     </repositories>
+	  <properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  </properties>
+	
+	  <repositories>
+	    <repository>
+	      <id>github-releases</id>
+	      <url>http://oss.sonatype.org/content/repositories/github-releases/</url>
+	    </repository>
+	    <repository>
+	      <id>clojars.org</id>
+	      <url>http://clojars.org/repo</url>
+	    </repository>
+	  </repositories>
     <dependencies>
         <!-- hbase start-->
 		<dependency>
