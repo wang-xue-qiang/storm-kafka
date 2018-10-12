@@ -11,7 +11,7 @@ public class MyPolo {
 	public static void main(String[] args) {
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("spout", new MySpout(),1);
-		builder.setBolt("blot", new MyBolt(),1).shuffleGrouping("spout");
+		builder.setBolt("blot", new MyBolt(),2).shuffleGrouping("spout");
 		Map conf = new HashMap();
 		conf.put(Config.TOPOLOGY_WORKERS, 4);
 		if (args.length > 0) {

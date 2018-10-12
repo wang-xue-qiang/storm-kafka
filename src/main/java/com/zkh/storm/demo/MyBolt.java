@@ -26,7 +26,7 @@ public class MyBolt implements IRichBolt{
 			str = input.getStringByField("log");
 			if(null != str){
 				num++;
-				System.out.println("==========lines:"+num+",session_id"+str.split("\t")[1]);
+				System.out.println("线程【"+Thread.currentThread().getName()+"】==========>lines:"+num+",session_id:"+str.split("\t")[1]);
 			}
 			collector.ack(input);
 		} catch (Exception e) {
